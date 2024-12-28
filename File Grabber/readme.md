@@ -10,7 +10,7 @@
 - Firefox does not behave the same way as Chrome so same methods do not apply 
 
 ## Notes
-- removed local paths that would lead to identity
-- there is a reason that the paths have two notations: "path\\dir" vs "path/dir" 
+- removed local paths
+- there is a reason that the paths have two notations: ``path\dir`` vs ``path/dir`` 
 	- first one is using path immediately so "/" is preferred
-	- second is passing it to browser so "\" is preferred which most likely OS dependant (Windows for me)
+	- second is passing it to browser so "\\" is preferred which most likely OS dependant (Windows for me)
