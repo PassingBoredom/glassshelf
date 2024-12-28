@@ -1,0 +1,77 @@
+.root {
+	-fx-background-color: #1E0272;
+	-fx-font-family: Consolas;
+}
+
+VBox {
+	-fx-background-color: #110140;
+	-fx-spacing: 5; 
+	-fx-alignment: center;
+}
+
+.button {
+	-fx-background-radius: 5px;
+	-fx-background-color: #F5F6FB;
+	
+	-fx-border-radius: 5px;
+	-fx-border-color: black;
+	
+	-fx-text-fill: black;
+	-fx-font-size: 16pt;
+	
+	-fx-pref-height: 50px;
+	-fx-pref-width: 160px;
+
+	-fx-spacing: 20px;
+	
+}
+
+.button:hover {
+	-fx-background-color: darkslateblue;
+	-fx-text-fill: white;
+}
+
+.TextField {
+	-fx-background-color: #F5F6FB;
+}
+
+
+.tooltip {
+    -fx-text-fill: #F5F6FB;
+    -fx-background-color: #000000;
+    -fx-background-radius: 6px;
+    -fx-background-insets: 0;
+    -fx-padding: 10px;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.5) , 10, 0.0 , 0 , 3 );
+    -fx-font-size: 12px;
+}
+
+#Static_Input_Zero, #Static_Input_One, #Static_Input_Two, #Static_Input_Tri {
+	-fx-text-fill: #F5F6FB; 
+	-fx-font-size: 20pt;
+}					 
+					 
+#SD_Album, #DD_Album { 
+	-fx-text-fill: #71797E; 
+	-fx-font-size: 16pt;
+}
+#SD_Title,#DD_Title { 
+	-fx-text-fill: #F5F6FB; 
+	-fx-font-size: 20pt;
+}
+#SD_Artist,#DD_Artist { 
+	-fx-text-fill: #F5F6FB; 
+	-fx-font-size: 14pt;
+}
+#SD_Year,#DD_Year { 
+	-fx-text-fill: #71797E; 
+	-fx-font-size: 12pt;
+}
+
+#Input_Holder {
+	-fx-padding: 10px; 
+}
+
+#Display_Section {
+	-fx-background-color: #14014C;
+}

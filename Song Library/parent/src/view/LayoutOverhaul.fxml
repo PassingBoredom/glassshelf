@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- @author Alan Wang netid: aw795 -->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.Tooltip?>
+
+<AnchorPane 
+	maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" 
+	prefHeight="720.0" prefWidth="800.0" 
+	xmlns="http://javafx.com/javafx/19" 
+	xmlns:fx="http://javafx.com/fxml/1" 
+	stylesheets="@Style.css" 
+	fx:controller="src.view.OverhaulController">
+	
+   <children>
+		<ImageView fx:id="imageView" fitHeight="240.0" fitWidth="320.0" pickOnBounds="true" preserveRatio="true">
+			<image>
+				<!-- <Image url="@/resources/Music_Icon.jpg" backgroundLoading="true" /> -->
+				<Image backgroundLoading="true" url="@/resources/Me.png" />
+			</image>
+		</ImageView>
+		
+      <ListView fx:id="dataList" layoutX="10.0" layoutY="250.0" prefHeight="220.0" prefWidth="780.0">
+		<placeholder> <Label Text="No Songs Found" /> </placeholder>
+	  </ListView>
+	  
+      <GridPane id="Input_Holder" layoutY="480.0" prefHeight="240.0" prefWidth="480.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="240.0" minWidth="10.0" prefWidth="120.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="360.0" minWidth="10.0" prefWidth="360.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+			<RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="Field_Zero" prefWidth="360.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <TextField fx:id="Field_One" prefWidth="360.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="Field_Two" prefWidth="360.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="Field_Tri" prefWidth="360.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label id="Static_Input_Zero" alignment="CENTER" prefHeight="120.0" prefWidth="120.0" text="Title" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <Label id="Static_Input_One" alignment="CENTER" prefHeight="120.0" prefWidth="120.0" text="Artist" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <Label id="Static_Input_Two" alignment="CENTER" prefHeight="120.0" prefWidth="120.0" text="Year" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <Label id="Static_Input_Tri" alignment="CENTER" prefHeight="120.0" prefWidth="120.0" text="Album" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <VBox layoutX="480.0" layoutY="480.0" prefHeight="240.0" prefWidth="320.0">
+         <children>
+            <Button fx:id="Add" mnemonicParsing="false" onAction="#addAction" text="Add" textAlignment="CENTER" />
+            <Button fx:id="Edit" mnemonicParsing="false" onAction="#editAction" text="Edit" textAlignment="CENTER" />
+            <Button fx:id="Delete" mnemonicParsing="false" onAction="#deleteAction" text="Delete" textAlignment="CENTER" />
+            <Button fx:id="Save" mnemonicParsing="false" onAction="#saveAction" text="Save" textAlignment="CENTER" />
+         </children>
+      </VBox>
+      <AnchorPane id="Display_Section" layoutX="330.0" layoutY="10.0" prefHeight="220.0" prefWidth="460.0">
+         <children>
+            <GridPane fx:id="Display_Grid" prefHeight="220.0" prefWidth="460.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" prefWidth="120.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="360.0" minWidth="10.0" prefWidth="360.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="80.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+					<RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label fx:id="SD_Album" 	alignment="CENTER" prefHeight="40.0" prefWidth="120.0" text="Album" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                  <Label fx:id="SD_Title" 	alignment="CENTER" prefHeight="80.0" prefWidth="120.0" text="Title" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                  <Label fx:id="SD_Artist" 	alignment="CENTER" prefHeight="60.0" prefWidth="120.0" text="Artist" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                  <Label fx:id="SD_Year" 	alignment="CENTER" prefHeight="60.0" prefWidth="120.0" text="Year" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+				  
+                  <Label fx:id="DD_Album" 	prefHeight="40.0" prefWidth="360.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="0" >
+					<tooltip> <Tooltip fx:id="Album_Tip" text="tooltip" wrapText="true" prefHeight="60.0" prefWidth="360.0" /> </tooltip>
+				  </Label>
+                  <Label fx:id="DD_Title" 	prefHeight="80.0" prefWidth="360.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" >
+					<tooltip> <Tooltip fx:id="Title_Tip" text="tooltip" wrapText="true" prefHeight="60.0" prefWidth="360.0" /> </tooltip>
+				  </Label>
+                  <Label fx:id="DD_Artist" 	prefHeight="60.0" prefWidth="360.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" >
+					<tooltip> <Tooltip fx:id="Artist_Tip" text="tooltip" wrapText="true" prefHeight="60.0" prefWidth="360.0" /> </tooltip>
+				  </Label>
+                  <Label fx:id="DD_Year" 	prefHeight="60.0" prefWidth="360.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" >
+					<tooltip> <Tooltip fx:id="Year_Tip" text="tooltip" wrapText="true" prefHeight="60.0" prefWidth="360.0" /> </tooltip>
+				  </Label>
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

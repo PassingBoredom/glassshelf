@@ -1,0 +1,61 @@
+html, body { 
+  background: url("../images/YB-gradient.png") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height:100%;
+  width:100%;
+  margin:0;
+}
+
+body {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+#welcome-container { 
+  margin: auto;
+}
+
+#welcome-container h1 { 
+  font-size: 80px;
+  font-family: "Lora";
+  background: linear-gradient(#00FFFF, white);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+#welcome-container ul {
+  margin-left: 0;
+  margin-right: 0; 
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  padding-inline-start: 0px;
+}
+
+#welcome-container li { 
+  margin-left: 1em;
+  margin-right: 1em; 
+  font-size: 1.2rem;
+  font-family: "Roboto Mono", monospace;
+  position: relative;
+}
+
+a { 
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-family: "Roboto Mono", monospace;
+}
+
+a:hover {
+  color: #00FFFF;
+}
+
+.footer {
+  flex-shrink: 0;
+}

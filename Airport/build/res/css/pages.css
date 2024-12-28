@@ -1,0 +1,270 @@
+:root {
+    --adminBackground: rgba(69, 9, 53, 1);
+    --customerBackground: rgba(21, 9, 69, 1);
+    --repBackground: rgba(224, 67, 117, 1);
+	--aboutBackground: rgba(20, 170, 160, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	/* background: #222; */
+
+}
+
+/* Admin page  */
+
+.admin-header-shadow { 
+	position: top; 
+	width: 100%;
+	height: 1vh;
+	display: grid;
+	background: linear-gradient(var(--adminBackground), white);
+}
+
+.searchBox {
+	display: grid;
+	text-align: center;	
+	border-style: solid;
+	margin: 10px;
+	grid-template-columns: 1fr auto minmax(600px, 2fr) 1fr;
+}
+
+.searchBox .search-types { 
+	grid-column: 2 / 4;
+}
+
+
+.searchBox ul { 
+	margin-left: 0;
+	margin-right: 0; 
+	list-style: none;
+	display: flex;
+	justify-content: center;
+}
+
+.searchBox li {
+	margin-left: 1em;
+	margin-right: 1em; 
+	font-size: 1.2rem;
+	font-family: "Roboto Mono", monospace;
+	position: relative;
+}
+
+.searchBox li:hover {
+	color: #0006b1;
+}
+
+.searchBox li::before {
+    content: '';
+    display: block;
+    height: 2px;
+	position: absolute;
+    background: #0006b1;
+    bottom: -0.75em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 250ms;
+}
+  
+.searchBox li:hover::before {
+    transform: scale(1,1);
+}
+
+/* nav  */
+
+.admin-header {
+  background: var(--adminBackground);
+  text-align: center;
+  /* position: fixed; */
+  z-index: 999;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+
+nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background: var(--adminBackground);
+  width: 100%;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover {
+  /* color:  #32faff; */
+  color:  #CDBFA6;
+}
+
+
+@media screen and (min-width: 800px) {
+  .admin-header {
+    display: grid;
+	background: var(--adminBackground);
+    grid-template-columns: 0.25fr auto minmax(600px, 2fr) 0.25fr;
+  }
+  
+  .logo {
+    grid-column: 2 / 3;
+  }
+  
+  nav {
+    /* the following lines are not from my video, but add Edge support */
+    position: relative;
+    text-align: left;
+    transition: none;
+    transform: scale(1,1);
+    background: none;
+    top: initial;
+    left: initial;
+    /* end Edge support stuff */
+    
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  nav ul {
+    display: flex;
+  }
+  
+  nav li {
+    margin-left: 3em;
+    margin-bottom: 0;
+  }
+  
+  nav a {
+    opacity: 1;
+    position: relative;
+	color: white;
+	text-decoration: none;
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	
+  }
+  
+  nav a:hover {
+	/* color:  #32faff; */
+	color:  #CDBFA6;
+  }
+  
+}
+
+
+/* Rep page  */
+
+.rep-header-shadow { 
+	position: top; 
+	width: 100%;
+	height: 1vh;
+	display: grid;
+	background: linear-gradient(var(--repBackground), white);
+}
+
+/* nav  */
+
+.rep-header {
+  background: var(--repBackground);
+  text-align: center;
+  /* position: fixed; */
+  z-index: 999;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+@media screen and (min-width: 800px) {
+  .rep-header {
+    display: grid;
+	background: var(--repBackground);
+    grid-template-columns: 0.25fr auto minmax(600px, 2fr) 0.25fr;
+  }
+}
+
+/* Customer page  */
+
+.customer-header-shadow { 
+	position: top; 
+	width: 100%;
+	height: 1vh;
+	display: grid;
+	background: linear-gradient(var(--customerBackground), white);
+}
+
+.customer-header {
+  background: var(--customerBackground);
+  text-align: center;
+  /* position: fixed; */
+  z-index: 999;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+@media screen and (min-width: 800px) {
+  .customer-header {
+    display: grid;
+	background: var(--customerBackground);
+    grid-template-columns: 0.25fr auto minmax(600px, 2fr) 0.25fr;
+  }
+}
+
+/* About page  */
+
+.info-header-shadow { 
+	position: top; 
+	width: 100%;
+	height: 1vh;
+	display: grid;
+	background: linear-gradient(var(--aboutBackground), white);
+}
+
+/* nav  */
+
+.info-header {
+  background: var(--aboutBackground);
+  text-align: center;
+  /* position: fixed; */
+  z-index: 999;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+@media screen and (min-width: 800px) {
+  .info-header {
+    display: grid;
+	background: var(--aboutBackground);
+    grid-template-columns: 0.25fr auto minmax(600px, 2fr) 0.25fr;
+  }
+}
