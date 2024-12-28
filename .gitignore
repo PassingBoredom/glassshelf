@@ -1,0 +1,45 @@
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Vim Swap files #
+##################
+# no need backup two backups 
+# they will get cluttered anyway 
+*.~
+*.un~
+
+# bak files #
+#############
+# no idea what is creating the backups tho 
+*.bak
+
+# Folders # 
+###############
+env/
+imgs/
+.vscode/
+bin/
+target/
+
+# ignore itself # 
+#################
+# .gitignore
