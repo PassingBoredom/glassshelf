@@ -1,3 +1,10 @@
+## Table of Contents
+- [Status Checker](#status-checker)
+- [File Grabber](#file-grabber)
+- [Song Library](#song-library)
+- [Chess](#terminal-based-chess)
+- [Mock Airport Website](#airport-booking-website)
+
 ## Status Checker 
 - Code to the status checker that you should have found via github page
 - Python
@@ -27,3 +34,6 @@
 - Website that mimics Airport booking
 - HTML, CSS, JSP, Java, SQL
 - [ ] Cleaned for others
+
+## License
+- The projects are not open for public use. All rights are reserved but theres nothing from me stopping you. 
