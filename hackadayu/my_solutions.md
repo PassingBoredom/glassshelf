@@ -1,6 +1,7 @@
 # Solutions to each exercise
 even if trivial, this will serve a proof of memory 
 also should show thought process for clarity (and to reread?) 
+I didn't use the DockerFile because I didn't see it nor bother with installing it but I got quite far?
 
 ## E: C1
 - Purpose: looks for a password
